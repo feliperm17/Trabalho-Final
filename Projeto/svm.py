@@ -8,10 +8,12 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 from sklearn.utils.fixes import delayed
 from joblib import Parallel, parallel_backend
+import os
 
 # Carregar os dados do arquivo CSV
-data = pd.read_csv('./featureslpq.csv')
-data_test = pd.read_csv('./featureslpqtest.csv')
+data = pd.read_csv('./features.csv')
+data_test = pd.read_csv('./featuresTeste.csv')
+
 
 # Separar as características (features) e os rótulos (labels)
 x_train = data.iloc[:, 1:]  # Todas as colunas exceto a primeira (features)
